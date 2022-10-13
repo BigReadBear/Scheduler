@@ -1,0 +1,23 @@
+Assignment3.zip contains: 
+assignment3
+	-DAO/*.java
+	-SQlite/*.java
+	-main/*.java
+	JITClasses.txt
+	sqlite-jdbc-3.39.3.0.jar
+	
+1. unzip assignment3.zip
+2. change directory to assignment3
+3. build command:
+	
+	javac -d build */*.java 		(compile and put .class files in directory "build", linux)
+	
+	javac -d build -sourcepath . main\Main.java  (Windows version (executed in CMD not PS))
+	
+	cp JITClasses.txt build			(place the input files in the build directory)
+	cp sqlite-jdbc-3.39.3.0.jar build 	(sqlite driver needed runtime)
+4. change to directory build	
+5. run command:
+		
+	java -cp .:./sqlite-jdbc-3.39.3.0.jar main.Main (linux)
+	java -cp .;sqlite-jdbc-3.39.3.0.jar main.Main (Windows) 
